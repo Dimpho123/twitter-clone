@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home / X</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ========================
+       LEFT SIDEBAR
+  ======================== -->
+  <nav class="sidebar">
+
+    <!-- X Logo -->
+    <div class="logo">
+      <div class="logo-circle">
+        <svg viewBox="0 0 24 24">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.265 5.638L18.244 2.25zM17.083 19.77h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <ul class="nav">
+
+      <!-- Home -->
+      <li class="nav-item active">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="#e7e9ea">
+    <path d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913h6.638c.511 0 .929-.41.929-.913v-7.075h3.008v7.075c0 .502.418.913.929.913h6.639c.51 0 .928-.41.928-.913V7.904c0-.301-.158-.584-.408-.758zM20 20l-4.5.01.011-7.097c0-.502-.418-.913-.928-.913H9.44c-.511 0-.929.41-.929.913L8.5 20H4V8.773l8.011-5.342L20 8.764z"/>
+  </svg>
+        <span>Home</span>
+      </li>
+
+      <!-- Explore -->
+      <li class="nav-item">
+       <svg viewBox="0 0 24 24" width="26" height="26" fill="#e7e9ea">
+        <path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z">
+
+        </svg>
+        <span>Explore</span>
+      </li>
+
+      <!-- Notifications -->
+      <li class="nav-item">
+       <svg viewBox="0 0 24 24" width="26" height="26" fill="#e7e9ea">
+        <path d="M19.993 9.042C19.48 5.017 16.054 2 11.996 2s-7.49 3.021-7.999 7.051L2.866 18H7.1c.463 2.282 2.481 4 4.9 4s4.437-1.718 4.9-4h4.236l-1.143-8.958zM12 20c-1.306 0-2.417-.835-2.829-2h5.658c-.412 1.165-1.523 2-2.829 2zm-6.866-4l.847-6.698C6.364 6.272 8.941 4 11.996 4s5.627 2.268 6.013 5.295L18.864 16H5.134z">
+  </svg>
+        <span>Notifications</span>
+        <span class="notif-badge">2</span>
+      </li>
+
+      <!-- Follow -->
+      <li class="nav-item">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="#e7e9ea"><path d="M21 5v3h3v2h-3v3h-2v-3h-3V8h3V5h2zM10 2C7.791 2 6 3.79 6 6s1.791 4 4 4 4-1.79 4-4-1.791-4-4-4zm0 9c-2.352 0-4.373.85-5.863 2.44-1.477 1.58-2.366 3.8-2.632 6.46l-.11 1.1h17.21l-.11-1.1c-.266-2.66-1.155-4.88-2.632-6.46C14.373 11.85 12.352 11 10 11z">
+        
+      </svg>
+        <span>Follow</span>
+      </li>
+
+      <!-- Chat -->
+      <li class="nav-item">
+        <svg viewBox="0 0 24 24"  width="26" height="26" fill="#e7e9ea"><path d="M1.998 4.499c0-.828.671-1.499 1.5-1.499h17c.828 0 1.5.671 1.5 1.499v2.858l-10 4.545-10-4.547V4.499zm0 5.053V19.5c0 .828.671 1.5 1.5 1.5h17c.828 0 1.5-.672 1.5-1.5V9.554l-10 4.545-10-4.547z">
+
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <span>Chat</span>
+      </li>
+
+      <!-- Grok -->
+      <li class="nav-item">
+        <svg viewBox="0 0 33 32" width="26" height="26" fill="#e7e9ea" ><path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+        </svg>
+        <span>Grok</span>
+      </li>
+
+      <!-- Profile -->
+      <li class="nav-item">
+       <svg viewBox="0 0 24 24" width="26" height="26" fill="#e7e9ea" ><path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z">
+        
+       </svg>
+        <span>Profile</span>
+      </li>
+
+      <!-- More -->
+      <li class="nav-item">
+        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+        <span>More</span>
+      </li>
+
+    </ul>
+
+    <!-- Post Button -->
+    <div class="post-btn">
+      <span>Post</span>
+    </div>
+
+    <!-- User at the bottom -->
+    <div class="sidebar-user">
+      <div class="user-avatar">
+        <img src="resources/image1 (1).jpeg" alt="Kgothi" />
+      </div>
+      <div class="user-info">
+        <div class="user-name">Dimpholebotsa</div>
+        <div class="user-handle">@DimphoLebotsa</div>
+      </div>
+      <div class="dots-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+      </div>
+    </div>
+
+  </nav>
+
+
+  <!-- ========================
+       MAIN FEED
+  ======================== -->
+  <main class="feed">
+
+    <!-- Sticky header with tabs -->
+    <div class="feed-header">
+      <div class="tabs">
+        <div class="tab active">For you</div>
+        <div class="tab">Following</div>
+      </div>
+    </div>
+
+    <!-- Compose box -->
+    <div class="compose">
+      <div class="compose-avatar">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kgothi" alt="me" />
+      </div>
+      <div class="compose-right">
+        <div class="compose-placeholder">What is happening?!</div>
+        <div class="compose-bottom">
+          <div class="compose-icons">
+            <!-- Photo -->
+            <div class="compose-icon">
+           <svg viewBox="0 0 24 24"><path d="M3 5.5C3 4.119 4.119 3 5.5 3h13C19.881 3 21 4.119 21 5.5v13c0 1.381-1.119 2.5-2.5 2.5h-13C4.119 21 3 19.881 3 18.5v-13zM5.5 5c-.276 0-.5.224-.5.5v9.086l3-3 3 3 5-5 3 3V5.5c0-.276-.224-.5-.5-.5h-13zM19 15.414l-3-3-5 5-3-3-3 3V18.5c0 .276.224.5.5.5h13c.276 0 .5-.224.5-.5v-3.086zM9.75 7C8.784 7 8 7.784 8 8.75s.784 1.75 1.75 1.75 1.75-.784 1.75-1.75S10.716 7 9.75 7z"></svg>
+            </div>
+            <!-- GIF -->
+            <div class="compose-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 5.5C3 4.119 4.12 3 5.5 3h13C19.88 3 21 4.119 21 5.5v13c0 1.381-1.12 2.5-2.5 2.5h-13C4.12 21 3 19.881 3 18.5v-13zM5.5 5c-.28 0-.5.224-.5.5v13c0 .276.22.5.5.5h13c.28 0 .5-.224.5-.5v-13c0-.276-.22-.5-.5-.5h-13zM18 10.711V9.25h-3.74v5.5h1.44v-1.719h1.7V11.57h-1.7v-.859H18zM11.79 9.25h1.44v5.5h-1.44v-5.5zm-3.07 1.375c.34 0 .77.172 1.02.43l1.03-.86c-.51-.601-1.28-.945-2.05-.945C7.19 9.25 6 10.453 6 12s1.19 2.75 2.72 2.75c.85 0 1.54-.344 2.05-.945v-2.149H8.38v1.032H9.4v.515c-.17.086-.42.172-.68.172-.76 0-1.36-.602-1.36-1.375 0-.688.6-1.375 1.36-1.375z"></svg>
+            </div>
+            <!-- Poll -->
+            <div class="compose-icon">
+              <svg viewBox="0 0 24 24"><path d="M2 9h3v12H2V9zm8-6h3v18h-3V3zm8 8h3v10h-3V11z"/></svg>
+            </div>
+            <!-- Emoji -->
+            <div class="compose-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+            </div>
+            <!-- Schedule -->
+            <div class="compose-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <!-- Location -->
+            <div class="compose-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+          </div>
+          <div class="compose-post-btn">Post</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================
+         TWEET 1 - shums (with image)
+    ======================== -->
+    <div class="tweet">
+      <div class="tweet-avatar">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=shums" alt="shums" />
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-top">
+          <span class="tweet-name">shums</span>
+          <span class="verified-icon">
+            <svg viewBox="0 0 24 24"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.9-2.19-3.33-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.8c.67 1.31 1.91 2.2 3.34 2.2s2.67-.89 3.33-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg>
+          </span>
+          <span class="tweet-handle">@YourBoiShu_</span>
+          <span class="tweet-time">&middot; 4h</span>
+          <div class="tweet-menu">
+            <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </div>
+        </div>
+        <div class="tweet-text">These SA cameras make Doja cat look like she comes from Dube 😭😭</div>
+        <div class="tweet-img">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80" alt="tweet image" loading="lazy" />
+        </div>
+        <div class="tweet-actions">
+          <div class="action reply">
+
+            <svg viewBox="0 0 24 24"><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></svg>            
+             <span>47</span>
+          </div>
+          <div class="action rt">
+          <svg viewBox="0 0 24 24"><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></svg>            <span>312</span>
+          </div>
+          <div class="action like">
+        <svg viewBox="0 0 24 24"><path d="M20.884 13.19c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></svg>           
+           <span>2.8K</span>
+          </div>
+          <div class="action share">
+            <svg viewBox="0 0 24 24"><path d="M6 3V19L12 14L18 19V3H6Z"/></svg>
+            <span>91K</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================
+         TWEET 2 - TechZA
+    ======================== -->
+    <div class="tweet">
+      <div class="tweet-avatar">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=TechZA" alt="TechZA" />
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-top">
+          <span class="tweet-name">TechZA Daily</span>
+          <span class="verified-icon">
+            <svg viewBox="0 0 24 24"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.9-2.19-3.33-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.8c.67 1.31 1.91 2.2 3.34 2.2s2.67-.89 3.33-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg>
+          </span>
+          <span class="tweet-handle">@TechZA</span>
+          <span class="tweet-time">&middot; 1h</span>
+          <div class="tweet-menu">
+            <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </div>
+        </div>
+        <div class="tweet-text">South Africa's tech scene is booming 🚀 Cape Town ranked #3 startup ecosystem in Africa. The future is bright 🌍 #TechAfrica #StartupSA</div>
+        <div class="tweet-actions">
+          <div class="action reply"><svg viewBox="0 0 24 24"><path d="M1.75 1.75C.784 1.75.25 2.332.25 3v13.26c0 .668.534 1.25 1.5 1.25H4v3.992c0 .498.607.746.949.386L9.204 17.5H22.25c.966 0 1.5-.582 1.5-1.25V3c0-.668-.534-1.25-1.5-1.25H1.75z"/></svg><span>88</span></div>
+          <div class="action rt"><svg viewBox="0 0 24 24"><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55v5.45C5.5 14.437 6.563 15.5 8 15.5h5.5v2H8c-2.485 0-4.5-2.015-4.5-4.5v-5.45L1.432 9.48.068 8.02 4.5 3.88zM16 8.5h-5.5v-2H16c2.485 0 4.5 2.015 4.5 4.5v5.45l2.068-1.48 1.364 1.46L19.5 20.12l-4.432-4.14 1.364-1.46 2.068 1.48V11c0-1.437-1.063-2.5-2.5-2.5z"/></svg><span>540</span></div>
+          <div class="action like"><svg viewBox="0 0 24 24"><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91z"/></svg><span>4.2K</span></div>
+          <div class="action share"><svg viewBox="0 0 24 24"><path d="M6 3V19L12 14L18 19V3H6Z"/></svg><span>142K</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================
+         TWEET 3 - Naledi M
+    ======================== -->
+    <div class="tweet">
+      <div class="tweet-avatar">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=NalediM" alt="Naledi" />
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-top">
+          <span class="tweet-name">Naledi M</span>
+          <span class="tweet-handle">@NalediMaps</span>
+          <span class="tweet-time">&middot; 2h</span>
+          <div class="tweet-menu">
+            <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </div>
+        </div>
+        <div class="tweet-text">Load shedding hit different when you're in the middle of an online exam 😤 Eskom please we're begging #loadshedding #StudentLife</div>
+        <div class="tweet-actions">
+          <div class="action reply"><svg viewBox="0 0 24 24"><path d="M1.75 1.75C.784 1.75.25 2.332.25 3v13.26c0 .668.534 1.25 1.5 1.25H4v3.992c0 .498.607.746.949.386L9.204 17.5H22.25c.966 0 1.5-.582 1.5-1.25V3c0-.668-.534-1.25-1.5-1.25H1.75z"/></svg><span>203</span></div>
+          <div class="action rt"><svg viewBox="0 0 24 24"><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55v5.45C5.5 14.437 6.563 15.5 8 15.5h5.5v2H8c-2.485 0-4.5-2.015-4.5-4.5v-5.45L1.432 9.48.068 8.02 4.5 3.88zM16 8.5h-5.5v-2H16c2.485 0 4.5 2.015 4.5 4.5v5.45l2.068-1.48 1.364 1.46L19.5 20.12l-4.432-4.14 1.364-1.46 2.068 1.48V11c0-1.437-1.063-2.5-2.5-2.5z"/></svg><span>1.2K</span></div>
+          <div class="action like"><svg viewBox="0 0 24 24"><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91z"/></svg><span>9.8K</span></div>
+          <div class="action share"><svg viewBox="0 0 24 24"><path d="M6 3V19L12 14L18 19V3H6Z"/></svg><span>340K</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================
+         TWEET 4 - Bafana Bafana (with image)
+    ======================== -->
+    <div class="tweet">
+      <div class="tweet-avatar">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bafana" alt="Bafana" />
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-top">
+          <span class="tweet-name">Bafana Bafana</span>
+          <span class="verified-icon">
+            <svg viewBox="0 0 24 24"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.9-2.19-3.33-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.8c.67 1.31 1.91 2.2 3.34 2.2s2.67-.89 3.33-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg>
+          </span>
+          <span class="tweet-handle">@BafanaBafana</span>
+          <span class="tweet-time">&middot; 3h</span>
+          <div class="tweet-menu">
+            <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </div>
+        </div>
+        <div class="tweet-text">We go again! 💚💛 Training hard for the AFCON qualifiers. The whole nation is behind us 🇿🇦 #BafanaBafana #AFCON2025</div>
+        <div class="tweet-img">
+          <img src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=600&q=80" alt="tweet image" loading="lazy" />
+        </div>
+        <div class="tweet-actions">
+          <div class="action reply"><svg viewBox="0 0 24 24"><path d="M1.75 1.75C.784 1.75.25 2.332.25 3v13.26c0 .668.534 1.25 1.5 1.25H4v3.992c0 .498.607.746.949.386L9.204 17.5H22.25c.966 0 1.5-.582 1.5-1.25V3c0-.668-.534-1.25-1.5-1.25H1.75z"/></svg><span>512</span></div>
+          <div class="action rt"><svg viewBox="0 0 24 24"><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55v5.45C5.5 14.437 6.563 15.5 8 15.5h5.5v2H8c-2.485 0-4.5-2.015-4.5-4.5v-5.45L1.432 9.48.068 8.02 4.5 3.88zM16 8.5h-5.5v-2H16c2.485 0 4.5 2.015 4.5 4.5v5.45l2.068-1.48 1.364 1.46L19.5 20.12l-4.432-4.14 1.364-1.46 2.068 1.48V11c0-1.437-1.063-2.5-2.5-2.5z"/></svg><span>3.1K</span></div>
+          <div class="action like"><svg viewBox="0 0 24 24"><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91z"/></svg><span>18.5K</span></div>
+          <div class="action share"><svg viewBox="0 0 24 24"><path d="M6 3V19L12 14L18 19V3H6Z"/></svg><span>890K</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================
+         TWEET 5 - BBMzansi
+    ======================== -->
+    <div class="tweet">
+      <div class="tweet-avatar">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=BBMzansi" alt="BBMzansi" />
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-top">
+          <span class="tweet-name">Big Brother Mzansi</span>
+          <span class="verified-icon">
+            <svg viewBox="0 0 24 24"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.9-2.19-3.33-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.8c.67 1.31 1.91 2.2 3.34 2.2s2.67-.89 3.33-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg>
+          </span>
+          <span class="tweet-handle">@BBMzansi</span>
+          <span class="tweet-time">&middot; 6h</span>
+          <div class="tweet-menu">
+            <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+          </div>
+        </div>
+        <div class="tweet-text">TOP SIX confirmed! 🔥 The R2 Million finale is THIS Sunday. Who are you voting for? Drop your pick below 👇 #BBMzansi</div>
+        <div class="tweet-actions">
+          <div class="action reply"><svg viewBox="0 0 24 24"><path d="M1.75 1.75C.784 1.75.25 2.332.25 3v13.26c0 .668.534 1.25 1.5 1.25H4v3.992c0 .498.607.746.949.386L9.204 17.5H22.25c.966 0 1.5-.582 1.5-1.25V3c0-.668-.534-1.25-1.5-1.25H1.75z"/></svg><span>1.8K</span></div>
+          <div class="action rt"><svg viewBox="0 0 24 24"><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55v5.45C5.5 14.437 6.563 15.5 8 15.5h5.5v2H8c-2.485 0-4.5-2.015-4.5-4.5v-5.45L1.432 9.48.068 8.02 4.5 3.88zM16 8.5h-5.5v-2H16c2.485 0 4.5 2.015 4.5 4.5v5.45l2.068-1.48 1.364 1.46L19.5 20.12l-4.432-4.14 1.364-1.46 2.068 1.48V11c0-1.437-1.063-2.5-2.5-2.5z"/></svg><span>5.2K</span></div>
+          <div class="action like"><svg viewBox="0 0 24 24"><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91z"/></svg><span>31K</span></div>
+          <div class="action share"><svg viewBox="0 0 24 24"><path d="M6 3V19L12 14L18 19V3H6Z"/></svg><span>2.1M</span></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- ========================
+       RIGHT SIDEBAR
+  ======================== -->
+  <aside class="right">
+
+    <!-- Search -->
+    <div class="search-bar">
+      <span class="search-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </span>
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <!-- Subscribe to Premium widget -->
+    <div class="widget">
+      <div class="widget-header">
+        <h3>Subscribe to Premium</h3>
+        <span class="premium-badge">50% off</span>
+      </div>
+      <div class="premium-widget">
+        <p class="premium-desc">Get rid of ads, see your analytics, boost your replies and unlock 20+ features.</p>
+        <span class="subscribe-btn">Subscribe</span>
+      </div>
+    </div>
+
+    <!-- Today's News widget -->
+    <div class="widget">
+      <div class="widget-header">
+        <h3>Today's News</h3>
+        <span class="widget-close">&times;</span>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">Big Brother Mzansi Top Six Await R2 Million Finale Verdict</div>
+        <div class="news-meta">
+          <div class="news-avatars">
+            <div class="news-avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=news1" alt="" /></div>
+            <div class="news-avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=news2" alt="" /></div>
+          </div>
+          <span class="news-info">2 days ago &middot; Entertainment &middot; 14.4K posts</span>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">Doja Cat Pranks Estranged Dad with Fake Porn Ticket Link Before SA Show</div>
+        <div class="news-meta">
+          <div class="news-avatars">
+            <div class="news-avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=news3" alt="" /></div>
+            <div class="news-avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=news4" alt="" /></div>
+          </div>
+          <span class="news-info">Trending now &middot; Entertainment &middot; 979 posts</span>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">Doja Cat Performs at Global Citizen's Move Afrika Event in Pretoria, South Africa</div>
+        <div class="news-meta">
+          <div class="news-avatars">
+            <div class="news-avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=news5" alt="" /></div>
+            <div class="news-avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=news6" alt="" /></div>
+          </div>
+          <span class="news-info">Trending now &middot; Entertainment &middot; 617 posts</span>
+        </div>
+      </div>
+
+      <a class="widget-more" href="#">Show more</a>
+    </div>
+
+    <!-- Footer -->
+    <p class="footer">
+      <a href="#">Terms of Service</a> &middot;
+      <a href="#">Privacy Policy</a> &middot;
+      <a href="#">Cookie Policy</a> &middot;
+      <a href="#">Accessibility</a> &middot;
+      <a href="#">Ads info</a>
+      <br/>© 2025 X Corp.
+    </p>
+
+  </aside>
+
+</div>
+
+</body>
+</html>
