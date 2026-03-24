@@ -143,3 +143,71 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+//FOR THE EXPLORE BUTTON
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navItems = document.querySelectorAll(".nav-item");
+
+  const homePage = document.querySelector(".home-page");
+  const explorePage = document.querySelector(".explore-page");
+
+  // HOME
+  navItems[0].addEventListener("click", () => {
+    homePage.style.display = "block";
+    explorePage.style.display = "none";
+  });
+
+  // EXPLORE
+  navItems[1].addEventListener("click", () => {
+    homePage.style.display = "none";
+    explorePage.style.display = "block";
+  });
+
+});
+
+
+
+
+// =======================
+// EXPLORE BUTTON
+// =======================
+const exploreBtn = document.querySelectorAll(".nav-item")[1];
+const homePage = document.querySelector(".home-page");
+const explorePage = document.querySelector(".explore-page");
+
+exploreBtn.addEventListener("click", () => {
+  homePage.style.display = "none";
+  explorePage.style.display = "block";
+
+  setupExploreTabs(); // initialize tabs
+});
+// =======================
+// EXPLORE TABS FUNCTION
+// =======================
+function setupExploreTabs() {
+ const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+      // remove active from all tabs
+      tabs.forEach(t => t.classList.remove("active"));
+
+      // hide all content
+      contents.forEach(c => c.classList.remove("active"));
+
+      // activate clicked tab
+      tab.classList.add("active");
+
+      // show correct content
+      const target = document.getElementById(tab.dataset.tab);
+      if (target) {
+        target.classList.add("active");
+      }
+
+    });
+  });
+}
