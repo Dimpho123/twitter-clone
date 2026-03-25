@@ -576,18 +576,7 @@ body.dark .compose-input {
   flex-shrink: 0;
   fill: #e7e9ea; 
 }
-.tweet-video {
-  margin-top: 12px;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid #2f3336;
-}
 
-.tweet-video video {
-  width: 100%;
-  max-height:600px;
-  display: block;
-}
 
 
 /* TRENDING SECTION */
@@ -1207,5 +1196,111 @@ body.dark .post {
     align-self: flex-end;
     padding: 6px 14px;
     font-size: 14px;
+  }
+}
+
+/* =========================
+   TWEET - MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+
+  .tweet {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .tweet-picture {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tweet-name {
+    font-size: 14px;
+  }
+
+  .tweet-handle,
+  .tweet-time {
+    font-size: 13px;
+  }
+
+  .tweet-text {
+    font-size: 14px;
+  }
+
+  .tweet-top {
+    gap: 4px;
+  }
+
+  .tweet-menu {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tweet-menu svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tweet-img {
+    margin-top: 8px;
+    border-radius: 12px;
+  }
+
+  .tweet-img img {
+    max-height: 250px;
+  }
+
+  .tweet-actions {
+    margin-top: 10px;
+    max-width: 100%;
+    gap: 6px;
+  }
+}
+
+
+/* =========================
+   USER PROFILE - MOBILE
+========================= */
+@media (max-width: 600px) {
+
+  .user-picture {
+    width: 36px;
+    height: 36px;
+  }
+
+  .user-info {
+    min-width: 0;
+  }
+
+  .user-name {
+    font-size: 14px;
+  }
+
+  .user-handle {
+    font-size: 13px;
+  }
+}
+
+
+
+/* =========================
+   TOGGLE SWITCH - MOBILE
+========================= */
+@media (max-width: 600px) {
+
+  .toggle-switch {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+
+  .slider::before {
+    height: 18px;
+    width: 18px;
+    left: 2.5px;
+    bottom: 2.5px;
+  }
+
+  .toggle-switch input:checked + .slider::before {
+    transform: translateX(22px);
   }
 }
