@@ -178,28 +178,49 @@ body.dark {
       border-bottom: 1px solid #2f3336;
     }
 
-    /* Tabs */
-    .tabs {
-      display: flex;
-    }
-    .tab {
-      flex: 1;
-      text-align: center;
-      padding: 16px 0;
-      font-size: 15px;
-      font-weight: 500;
-      color: #71767b;
-      border-bottom: 2px solid transparent;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .tab:hover { background: #080808; }
-    .tab.active {
-      font-weight: 700;
-      color: #e7e9ea;
-      border-bottom-color: #1d9bf0;
-    }
+/* Tabs */
+/* Tabs */
+.tabs {
+  display: flex;
+}
 
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #71767b;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* DARK MODE (default) */
+.tab:hover {
+  background: #080808;
+}
+
+.tab.active {
+  font-weight: 700;
+  color: #e7e9ea;
+  border-bottom-color: #1d9bf0;
+}
+
+/* LIGHT MODE (FULL override) */
+/* LIGHT MODE */
+body.light-mode .tab {
+  color: #536471;
+}
+
+body.light-mode .tab.active {
+  color: black;
+  border-bottom-color: #1d9bf0;
+}
+
+body.light-mode .tab:hover {
+  background: #f0f0f0;
+}
     /* Compose box */
     .compose {
       display: flex;
@@ -547,37 +568,7 @@ body.dark .compose-input {
     }
     .widget-more:hover { background: #1a1a1a; }
 
-    /* Footer */
-    .footer {
-      color: #71767b;
-      font-size: 13px;
-      line-height: 1.8;
-      padding: 0 4px;
-    }
-    .footer a { color: #71767b; }
-    .footer a:hover { text-decoration: underline; }
-
-    /* =====================
-       RESPONSIVE
-    ===================== */
-    @media (max-width: 1100px) { .right { width: 290px; } }
-    @media (max-width: 990px)  { .right { display: none; } }
-
-    @media (max-width: 688px) {
-      .sidebar { width: 68px; padding: 0 4px; align-items: center; }
-      .nav-item span,
-      .sidebar-user .user-info,
-      .post-btn span { display: none; }
-      .nav-item { padding: 12px; justify-content: center; }
-      .post-btn { width: 50px; height: 50px; padding: 0; border-radius: 50%; margin-top: 14px; display: flex; align-items: center; justify-content: center; }
-      .sidebar-user { padding: 12px; justify-content: center; }
-    }
-
-    @media (max-width: 480px) {
-      .tweet, .compose { padding: 10px 12px; }
-    }
-
-
+ 
     .nav-item svg {
   width: 26px;
   height: 26px;
@@ -630,19 +621,55 @@ body.dark .compose-input {
   color: #71767b;
 }
 
-.dark-toggle {
-  margin-top: 15px;
-  padding: 10px;
-  background: #1d9bf0;
-  color: white;
-  text-align: center;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
+/* Toggle container */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
 }
 
-.dark-toggle:hover {
-  background: #1a8cd8;
+/* Hide checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Background slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+/* Circle knob */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+/* Checked state (active toggle) */
+.toggle-switch input:checked + .slider {
+  background-color: #1d9bf0;
+}
+
+/* Move knob when checked */
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(24px);
 }
 
 /* DARK MODE STYLES */
@@ -711,7 +738,7 @@ body.dark .tweet {
 
 
 
-
+/* for the likes, retweet and comment features */
 
 .liked svg {
   fill: red;
@@ -805,9 +832,9 @@ body:not(.dark) .search-bar input:focus {
   background: #ffffff;
 }
 
-/* =====================
+/* 
    SIDEBAR TEXT + ICONS (LIGHT MODE)
-===================== */
+*/
 body:not(.dark) .sidebar {
   color: #0f1419;
 }
@@ -816,22 +843,22 @@ body:not(.dark) .nav-item {
   color: #0f1419;
 }
 
-/* Icons inherit this color */
+
 body:not(.dark) .nav-item svg {
   color: #0f1419;
   fill: currentColor;
 }
 
-/* Hover state for better contrast */
+
 body:not(.dark) .nav-item:hover {
   background: #e6ecf0;
   color: #0f1419;
 }
 
 
-/* =====================
+/*
    MORE MENU - LIGHT MODE
-===================== */
+*/
 body:not(.dark) .more-menu {
   background: #ffffff;
   border: 1px solid #e6ecf0;
@@ -846,9 +873,9 @@ body:not(.dark) .more-item:hover {
   background: #e6ecf0;
 }
 
-/* =====================
+/* 
    MORE MENU - DARK MODE 
-===================== */
+ */
 body.dark .more-menu {
   background: #000;
   border: 1px solid #2f3336;
@@ -863,36 +890,51 @@ body.dark .more-item:hover {
   background: #1a1a1a;
 }
 
-/* FOR THE EXPLORE PAGE */
 /* EXPLORE PAGE */
 .explore-page {
   width: 100%;
   max-width: 600px;
   margin: auto;
-  border-left: 1px solid #2f3336;
-  border-right: 1px solid #2f3336;
+  border-left: 1px solid #e6ecf0;
+  border-right: 1px solid #e6ecf0;
   min-height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+
+body.dark .explore-page {
   background-color: black;
   color: white;
+  border-left: 1px solid #2f3336;
+  border-right: 1px solid #2f3336;
 }
-
 /* SEARCH BAR */
-.explore-search {
-  padding: 10px;
-  border-bottom: 1px solid #2f3336;
-  position: sticky;
-  top: 0;
-  background: black;
-}
-
 .explore-search input {
   width: 100%;
   padding: 10px;
   border-radius: 25px;
   border: none;
+
+  /* LIGHT MODE DEFAULT */
+  background: #f0f2f5;
+  color: black;
+}
+body.dark .explore-search {
+  background: black;
+  border-bottom: 1px solid #2f3336;
+}
+
+.explore-search input {
+  background: #f0f2f5;
+  color: black;
+}
+
+body.dark .explore-search input {
   background: #202327;
   color: white;
 }
+
 
 /* TABS */
 .explore-tabs {
@@ -904,12 +946,18 @@ body.dark .more-item:hover {
 .explore-tabs span {
   padding: 15px;
   cursor: pointer;
-  color: #71767b;
+  color: #536471;
 }
 
+body.dark .explore-tabs span {
+  color: #71767b;
+}
 .explore-tabs .active {
-  color: white;
+  color: black;
   border-bottom: 3px solid #1d9bf0;
+}
+body.dark .explore-tabs .active {
+  color: white;
 }
 /* TREND LIST */
 .trending-list {
@@ -918,23 +966,32 @@ body.dark .more-item:hover {
 
 .trend {
   padding: 15px;
-  border-bottom: 1px solid #2f3336;
+  border-bottom: 1px solid #e6ecf0;
   cursor: pointer;
 }
 
-.trend:hover {
-  background-color: #16181c;
+body.dark .trend {
+  border-bottom: 1px solid #2f3336;
 }
 
+.trend:hover {
+  background-color: #f5f8fa;
+
+}
+body.dark .trend:hover {
+  background-color: #16181c;
+}
 .trend h4 {
   margin: 5px 0;
   font-size: 16px;
 }
 
 .trend small {
+  color: #536471;
+}
+body.dark .trend small {
   color: #71767b;
 }
-
 
 .tab-content {
   display: none;
@@ -949,3 +1006,61 @@ body.dark .more-item:hover {
   border-bottom: 2px solid #1da1f2;
 }
 
+   /* Footer */
+    .footer {
+      color: #71767b;
+      font-size: 13px;
+      line-height: 1.8;
+      padding: 0 4px;
+    }
+    .footer a { color: #71767b; }
+    .footer a:hover { text-decoration: underline; }
+
+  /* 
+       RESPONSIVE
+    */
+    @media (max-width: 1100px) { .right { width: 290px; } }
+    @media (max-width: 990px)  { .right { display: none; } }
+
+    @media (max-width: 688px) {
+      .sidebar { width: 68px; padding: 0 4px; align-items: center; }
+      .nav-item span,
+      .sidebar-user .user-info,
+      .post-btn span { display: none; }
+      .nav-item { padding: 12px; justify-content: center; }
+      .post-btn { width: 50px; height: 50px; padding: 0; border-radius: 50%; margin-top: 14px; display: flex; align-items: center; justify-content: center; }
+      .sidebar-user { padding: 12px; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .tweet, .compose { padding: 10px 12px; }
+    }
+
+
+    /* TO BE DELETED */
+    .post {
+  padding: 15px;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+body.dark .post {
+  border-bottom: 1px solid #2f3336;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post-content {
+  font-size: 15px;
+  margin-left: 50px;
+}
