@@ -112,8 +112,8 @@ body.dark {
       background: #1d9bf0;
       color: #fff;
       border-radius: 9999px;
-      padding: 16px;
-      font-size: 17px;
+      padding:10px 14px;
+      font-size: 15px;
       font-weight: 700;
       text-align: center;
       margin-top: 16px;
@@ -137,8 +137,8 @@ body.dark {
     .sidebar-user:hover { background: #1a1a1a; }
 
     .user-picture {
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -149,6 +149,7 @@ body.dark {
   height: 100%;
   object-fit: cover;
   display: block; 
+ 
 }
 
     .user-info { flex: 1; overflow: hidden; }
@@ -1063,4 +1064,90 @@ body.dark .post {
 .post-content {
   font-size: 15px;
   margin-left: 50px;
+}
+
+/*FOT MOBILE */
+@media (max-width: 600px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    height: 60px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    background: inherit;
+    border-top: 1px solid #2f3336;
+    z-index: 1000;
+  }
+
+  .nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    gap: 2px;
+    font-size: 10px;
+    padding: 6px;
+  }
+
+  .post-btn,
+  .sidebar-user {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .action {
+    padding: 10px;
+  }
+
+  .compose-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .tweet-text {
+    font-size: 16px;
+  }
+
+  .tweet-img img {
+    max-height: 300px;
+  }
+}
+
+.mobile-post-btn {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-post-btn {
+    display: flex;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background: #1d9bf0;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    z-index: 1001;
+  }
 }
