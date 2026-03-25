@@ -203,4 +203,52 @@ function setupExploreTabs() {
 /*
 document.body.classList.toggle("light-mode");
 */
+ /* TRENDING LIST */
+ const showMoreBtn = document.getElementById("showMoreTrends");
+const moreTrends = document.getElementById("more-trends");
 
+showMoreBtn.addEventListener("click", () => {
+  moreTrends.classList.toggle("hidden");
+
+  if (moreTrends.classList.contains("hidden")) {
+    showMoreBtn.textContent = "Show more";
+  } else {
+    showMoreBtn.textContent = "Show less";
+  }
+});
+
+
+
+
+/*POST BUTTON TO ACTUALLY POST */
+document.addEventListener("DOMContentLoaded", () => {
+  const postBtn = document.getElementById("postBtn");
+  const input = document.getElementById("postInput");
+  const feed = document.querySelector(".feed");
+
+  postBtn.addEventListener("click", () => {
+    const text = input.value.trim();
+
+    if (text === "") return;
+
+    const newPost = document.createElement("div");
+    newPost.classList.add("tweet");
+
+    newPost.innerHTML = `
+      <div class="tweet-picture">
+        <img src="resources/image1 (1).jpeg">
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-top">
+          <span class="tweet-name">You</span>
+          <span class="tweet-handle">@you</span>
+          <span class="tweet-time">· now</span>
+        </div>
+        <div class="tweet-text">${text}</div>
+      </div>
+    `;
+
+    feed.prepend(newPost);
+    input.value = "";
+  });
+});
