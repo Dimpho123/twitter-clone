@@ -42,19 +42,79 @@ document.addEventListener("click", (e) => {
 });
 
  // FOR REPLY CLICK
+
 document.querySelectorAll('.action.reply').forEach(btn => {
   btn.addEventListener('click', () => {
-    alert('Reply feature coming soon!');
+
+    const tweet = btn.closest('.tweet');
+    const actions = tweet.querySelector('.tweet-actions');
+    const container = tweet.querySelector('.replies-container');
+
+    
+    if (tweet.querySelector('.reply-box')) return;
+
+    const replyBox = document.createElement('div');
+    replyBox.classList.add('reply-box');
+
+    replyBox.innerHTML = `
+      <input type="text" class="reply-input" placeholder="Write a reply..." />
+      <button class="reply-send">Reply</button>
+    `;
+
+    
+    actions.after(replyBox);
+
+    const input = replyBox.querySelector('.reply-input');
+    const button = replyBox.querySelector('.reply-send');
+
+    button.addEventListener('click', () => {
+      const text = input.value.trim();
+
+      if (text !== "") {
+
+       
+        const reply = document.createElement('div');
+        reply.classList.add('tweet');
+
+        
+        container.appendChild(reply);
+
+        
+        const countSpan = btn.querySelector('span');
+        let count = parseInt(countSpan.textContent) || 0;
+        countSpan.textContent = count + 1;
+
+       
+        replyBox.remove();
+      }
+    });
+
+    input.focus();
   });
 });
 
 
  // FOR SHARE BUTTON
-document.querySelectorAll('.action.share').forEach(btn => {
-  btn.addEventListener('click', () => {
-    alert('Post shared!');
-  });
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".action.share");
+  if (!btn) return;
+
+  const countSpan = btn.querySelector("span");
+  let count = parseInt(countSpan.textContent);
+
+  if (btn.classList.contains("Saved")) {
+    btn.classList.remove("Saved");
+    countSpan.textContent = count - 1;
+
+    alert("Saved removed");
+  } else {
+    btn.classList.add("Saved");
+    countSpan.textContent = count + 1;
+
+    alert("Saved!");
+  }
 });
+
 
 // FOR DOWNLOAD BUTTON
 document.querySelectorAll('.action.download').forEach(btn => {
@@ -86,10 +146,10 @@ postBtn.addEventListener("click", () => {
     return;
   }
 
-  // Show feedback
+ 
   alert("Posted!");
 
-  // Clear input
+
   input.value = "";
 });
 
@@ -103,7 +163,7 @@ moreBtn.addEventListener("click", (e) => {
   moreMenu.classList.toggle("show");
 });
 
-// Close when clicking outside
+
 document.addEventListener("click", () => {
   moreMenu.classList.remove("show");
 });
@@ -148,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     explorePage.style.display = "none";
   });
 
-  // EXPLORE
+  // EXPLORE 
   navItems[1].addEventListener("click", () => {
     homePage.style.display = "none";
     explorePage.style.display = "block";
@@ -159,9 +219,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// =======================
-// EXPLORE BUTTON
-// =======================
+
+/* EXPLORE BUTTON
+*/
+
 const exploreBtn = document.querySelectorAll(".nav-item")[1];
 const homePage = document.querySelector(".home-page");
 const explorePage = document.querySelector(".explore-page");
@@ -170,11 +231,11 @@ exploreBtn.addEventListener("click", () => {
   homePage.style.display = "none";
   explorePage.style.display = "block";
 
-  setupExploreTabs(); // initialize tabs
+  setupExploreTabs();
 });
-// =======================
-// EXPLORE TABS FUNCTION
-// =======================
+/*
+ EXPLORE TABS FUNCTION
+*/
 function setupExploreTabs() {
  const tabs = document.querySelectorAll(".tab-btn");
   const contents = document.querySelectorAll(".tab-content");
@@ -200,9 +261,7 @@ function setupExploreTabs() {
     });
   });
 }
-/*
-document.body.classList.toggle("light-mode");
-*/
+
  /* TRENDING LIST */
  const showMoreBtn = document.getElementById("showMoreTrends");
 const moreTrends = document.getElementById("more-trends");
@@ -220,35 +279,3 @@ showMoreBtn.addEventListener("click", () => {
 
 
 
-/*POST BUTTON TO ACTUALLY POST */
-document.addEventListener("DOMContentLoaded", () => {
-  const postBtn = document.getElementById("postBtn");
-  const input = document.getElementById("postInput");
-  const feed = document.querySelector(".feed");
-
-  postBtn.addEventListener("click", () => {
-    const text = input.value.trim();
-
-    if (text === "") return;
-
-    const newPost = document.createElement("div");
-    newPost.classList.add("tweet");
-
-    newPost.innerHTML = `
-      <div class="tweet-picture">
-        <img src="resources/image1 (1).jpeg">
-      </div>
-      <div class="tweet-body">
-        <div class="tweet-top">
-          <span class="tweet-name">You</span>
-          <span class="tweet-handle">@you</span>
-          <span class="tweet-time">· now</span>
-        </div>
-        <div class="tweet-text">${text}</div>
-      </div>
-    `;
-
-    feed.prepend(newPost);
-    input.value = "";
-  });
-});

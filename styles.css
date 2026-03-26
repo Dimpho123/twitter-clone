@@ -407,6 +407,46 @@ body.dark .compose-input {
   stroke-width: 2;
 }
 
+/* FOR REPLY BOX */
+.replies-container {
+  margin-top: 10px;
+}
+
+.reply-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  margin-left: 52px;
+}
+
+.reply-input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #2f3336;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.reply-send {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #1d9bf0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.reply-item {
+  background: #16181c;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+
     .action.reply:hover  { color: #1d9bf0; background: rgba(29,155,240,0.12); }
     .action.rt:hover     { color: #00ba7c; background: rgba(0,186,124,0.12); }
     .action.like:hover   { color: #f91880; background: rgba(249,24,128,0.12); }
@@ -1143,9 +1183,9 @@ body.dark .post {
 
 
 
-/* =========================
+/* 
    RESPONSIVE (MOBILE)
-========================= */
+ */
 @media (max-width: 600px) {
 
   .compose {
@@ -1199,9 +1239,9 @@ body.dark .post {
   }
 }
 
-/* =========================
+/* 
    TWEET - MOBILE RESPONSIVE
-========================= */
+ */
 @media (max-width: 600px) {
 
   .tweet {
@@ -1257,6 +1297,47 @@ body.dark .post {
   }
 }
 
+/* 
+   REPLY - MOBILE FIX
+ */
+@media (max-width: 600px) {
 
+  .reply-box {
+    flex-direction: column;
+    margin-left: 40px; 
+    gap: 6px;
+  }
+
+  .reply-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .reply-send {
+    align-self: flex-end;
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .replies-container {
+    margin-left: 40px;
+  }
+
+
+  .replies-container .tweet {
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  .replies-container .tweet-picture {
+    width: 30px;
+    height: 30px;
+  }
+
+  .replies-container .tweet-text {
+    font-size: 14px;
+  }
+}
 
 
