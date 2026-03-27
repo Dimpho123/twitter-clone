@@ -41,8 +41,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
- // FOR REPLY CLICK
-
+//FOR REPLY 
 document.querySelectorAll('.action.reply').forEach(btn => {
   btn.addEventListener('click', () => {
 
@@ -50,7 +49,6 @@ document.querySelectorAll('.action.reply').forEach(btn => {
     const actions = tweet.querySelector('.tweet-actions');
     const container = tweet.querySelector('.replies-container');
 
-    
     if (tweet.querySelector('.reply-box')) return;
 
     const replyBox = document.createElement('div');
@@ -61,38 +59,33 @@ document.querySelectorAll('.action.reply').forEach(btn => {
       <button class="reply-send">Reply</button>
     `;
 
-    
     actions.after(replyBox);
 
     const input = replyBox.querySelector('.reply-input');
     const button = replyBox.querySelector('.reply-send');
 
+  
     button.addEventListener('click', () => {
       const text = input.value.trim();
 
       if (text !== "") {
 
-       
         const reply = document.createElement('div');
-        reply.classList.add('tweet');
+        reply.classList.add('reply-item');
+        reply.innerHTML = `<p>${text}</p>`;
 
-        
         container.appendChild(reply);
 
-        
         const countSpan = btn.querySelector('span');
         let count = parseInt(countSpan.textContent) || 0;
         countSpan.textContent = count + 1;
 
-       
         replyBox.remove();
       }
     });
 
-    input.focus();
   });
 });
-
 
  // FOR SHARE BUTTON
 document.addEventListener("click", (e) => {
@@ -186,8 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Focus input so user can type immediately
       input.focus();
 
-      // Optional message
-      showToast("Added " + hashtag);
+    
     });
   });
 

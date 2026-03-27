@@ -60,7 +60,16 @@ body.dark {
       justify-content: center;
       cursor: pointer;
     }
-    .logo-circle:hover { background: #1a1a1a; }
+
+/*LIGHT MODE */
+.logo svg {
+  fill: #000; 
+}
+
+/* DARK MODE */
+body.dark .logo svg {
+  fill: #e7e9ea; 
+}
 
     /* Nav items */
     .nav { list-style: none; display: flex; flex-direction: column; gap: 2px; }
@@ -180,7 +189,6 @@ body.dark {
     }
 
 /* Tabs */
-/* Tabs */
 .tabs {
   display: flex;
 }
@@ -197,7 +205,7 @@ body.dark {
   transition: all 0.2s ease;
 }
 
-/* DARK MODE (default) */
+/* DARK MODE 
 .tab:hover {
   background: #080808;
 }
@@ -209,7 +217,7 @@ body.dark {
 }
 
 /* LIGHT MODE (FULL override) */
-/* LIGHT MODE */
+
 body.light-mode .tab {
   color: #536471;
 }
@@ -410,6 +418,8 @@ body.dark .compose-input {
 /* FOR REPLY BOX */
 .replies-container {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .reply-box {
@@ -443,9 +453,61 @@ body.dark .compose-input {
   padding: 8px 12px;
   border-radius: 12px;
   margin-top: 6px;
+  margin-left: 52px; 
   font-size: 14px;
+  color: white;
+  position: relative;
 }
 
+.reply-item::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #2f3336;
+}
+
+/* LIGHT MODE  */
+.reply-item {
+  background: #f0f2f5;
+  color: #000;
+}
+
+body.dark .reply-item {
+  background: #16181c;
+  color: #e7e9ea;
+}
+
+/* LIGHT MODE */
+.reply-input {
+  background: transparent;
+  color: #000;
+}
+
+/* DARK MODE */
+body.dark .reply-input {
+  color: #e7e9ea;
+}
+
+/* LIGHT MODE */
+.reply-input {
+  border: 1px solid #ccc;
+}
+
+.reply-item::before {
+  background: #ccc;
+}
+
+/* DARK MODE */
+body.dark .reply-input {
+  border: 1px solid #2f3336;
+}
+
+body.dark .reply-item::before {
+  background: #2f3336;
+}
 
     .action.reply:hover  { color: #1d9bf0; background: rgba(29,155,240,0.12); }
     .action.rt:hover     { color: #00ba7c; background: rgba(0,186,124,0.12); }
